@@ -1,0 +1,26 @@
+{
+  "name": "BrandMaker",
+  "version": "1.0.0",
+  "description": "BrandMakerApp",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.13.1",
+    "path": "^0.11.14"
+  },
+   "engines": {
+    "node": "0.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunil131/BrandMaker.git"
+  },
+  "author": "Sunil Mehta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sunil131/BrandMaker/issues"
+  },
+  "homepage": "https://github.com/Sunil131/BrandMaker#readme"
+}
