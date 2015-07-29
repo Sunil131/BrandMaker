@@ -1,0 +1,18 @@
+.mycontent-top {
+	padding-right: 5px;
+	padding-left: 5px;
+  border-right: 1px dashed #333; : lime;
+}
+.mycontent-left {
+	padding-right: 5px;
+	padding-left: 5px;
+     border-right: 1px solid rgba(0, 0, 0, 0.1);
+  
+}
+
+hr.style-six {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}

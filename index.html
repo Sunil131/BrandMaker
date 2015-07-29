@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="utf-8">
+		<script src="js/jquery-1.11.3.js"></script>
+		
+		 <link href="css/style.css" rel="stylesheet" />
+		<!--<link href="css/bootstrap-theme.css" rel="stylesheet" />
+		<script src="js/bootstrap.js"></script>-->
+		
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		
+		
+		
+		
+		<script src="js/angular.js"></script>
+		<script src="js/angular-route.js"></script>
+		<script src="app/app.js"></script>
+
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>OFS-βɾąղժ ♏ąҟҽɾ</title>
+		<meta name="description" content="Make Your Brand Here">
+		<meta name="author" content="Sunil Mehta">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body ng-app="signApp" >
+			<div class="content-wrapper" >
+				<img src="http://www.objectfrontier.com/sites/default/files/logo.png" />
+			<div style="text-align: center"><h1 style="color:#5CB85C"><b>βɾąղժ ♏ąҟҽɾ</b></h2></div>
+				<div style="text-align: center; font-size: x-small;"><span style="color:#5CB85C;font-size: xx-small;">Beta Version</span></div>
+				<hr>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12" id="header"><h4>Fill your Details Here</h4></div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6">
+							<div class="mycontent-left">
+							<h4><span class="label label-primary">Name</span></h4>
+							<input type="text" class="form-control" ng-model='username' />
+							
+							<h4><span class="label label-primary">Title</span></h4>
+							<input type="text" class="form-control" ng-model='Title' />
+							
+							<h4><span class="label label-primary">Email</span></h4>
+							<input type="text" class="form-control" ng-model='Email' />
+							
+							<h4><span class="label label-primary">Phone</span></h4>
+							<input type="text" ng-model='Contact' class="form-control"   />
+							
+							
+						
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<h3>Card:</h3>
+						<div id='contactCard' class="container-fluid">
+							<strong>{{username}}</strong>	
+							<br>
+							<span><i>{{Title}}</i></span>
+							<table border="0">
+								<tr>
+									<td style="width: 90px;">Email</td>
+									<td><span>{{Email}}</span></td>
+								</tr>
+								<tr>
+									<td style="width: 90px;">Telephone</td>
+									<td><span>{{Contact}}</span></td>
+								</tr>
+							</table>
+							<br>
+							<img src="http://www.objectfrontier.com/sites/default/files/logo.png" alt="OFS-Object Frontier Software" />
+						</div>
+						<button id='selectSign' class="btn btn-success" > Select Signature </button>
+					</div>
+				</div>
+			</div>
+			</div>
+			
+		</div>
+		
+	</body>
+	<script>
+	$(document).ready(function(){
+		$("#selectSign").click(function () {
+    	var element = document.getElementById('contactCard');
+      if (document.body.createTextRange) { // ie
+        var range = document.body.createTextRange();
+        range.moveToElementText(element);
+        range.select();
+      } else if (window.getSelection) { // moz, opera, webkit
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(element);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+		});
+	});
+	</script>
+</html>
